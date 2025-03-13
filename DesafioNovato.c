@@ -1,9 +1,9 @@
-#include <stdio.h>
+#include <stdio.h> //biblioteca padrao
 
-int main(){
-    printf("Desafio Super Trunfo \n");  
+int main(){  // principais funçoes
+    printf("Desafio Super Trunfo \n");  // exbição do nome do jogo
     
-    int populacao;
+    int populacao; //declaranda cada variavel
     int pontosturisticos;
     float areakm;
     float pib;
