@@ -80,6 +80,7 @@ int main(){  // principais funçoes
     printf("Digite a quantidade de pontos turisticos:\n");
     scanf("%i", &pontosturisticos2);
 
+    printf ("Densidade Populacional: &areakm2 / &populacao2");
 
     //Exibição do resultado das cartas
 
