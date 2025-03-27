@@ -15,6 +15,7 @@ int main(){  // principais funçoes
     char estado1[2];  
     char codcarta1[4];
     char cidade1[50];
+    float pibpercapita1;
 
     printf("Digite a letra do Estado entre A e H:\n");   // Leitura e inserção de dados pelos usuários
     scanf("%s", &estado1);
@@ -23,13 +24,11 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta1);
 
-    
-    printf("Digite o nome da Cidade (Sem Espaço ex:SaoPaulo):\n");
+    while (getchar() != '\n'); 
+    printf("Digite o nome da Cidade:\n");
     scanf("%s", &cidade1);
     
-    
-
-    while (getchar() != '\n');
+     while (getchar() != '\n');
     printf("Digite a População da Cidade:\n");
     scanf("%d", &populacao1);
         
@@ -42,7 +41,7 @@ int main(){  // principais funçoes
     printf("Digite a quantidade de pontos turisticos:\n");
     scanf("%i", &pontosturisticos1);
 
-
+    pibpercapita1 =  pib1 * 1000000000 / (float) populacao1; // calculo de pib per capita usando casting
 
     //CARTA 2
     printf("Carta 02\n");
@@ -54,6 +53,7 @@ int main(){  // principais funçoes
     char estado2[2];  
     char codcarta2[4];
     char cidade2[50];
+    float pibpercapita2;
 
     printf("Digite a letra do Estado entre A e H:\n");   // Leitura e inserção dos dados pelos usuários
     scanf("%s", &estado2);
@@ -62,11 +62,10 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta2);
 
+    while (getchar() != '\n'); 
+    printf("Digite o nome da Cidade:\n");
+    scanf("%s", &cidade1);
     
-    printf("Digite o nome da Cidade (Sem Espaço ex:SaoPaulo):\n");
-    scanf("%s", &cidade2);
-    
-
     while (getchar() != '\n');
     printf("Digite a População da Cidade:\n");
     scanf("%d", &populacao2);
@@ -80,7 +79,7 @@ int main(){  // principais funçoes
     printf("Digite a quantidade de pontos turisticos:\n");
     scanf("%i", &pontosturisticos2);
 
-    printf ("Densidade Populacional: &areakm2 / &populacao2");
+    pibpercapita2 =  pib2 * 1000000000 / (float) populacao2; // calculo de pib per capita usando casting
 
     //Exibição do resultado das cartas
 
@@ -92,6 +91,9 @@ int main(){  // principais funçoes
     printf("Area Km²: %.2f\n", areakm1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos Turisticos: %i\n", pontosturisticos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", populacao1 / areakm1);
+    printf("PIB per capita: %.2f\n", pibpercapita1);
+
 
 
     printf("Informações Carta 02\n");                              // exibição da resultado da carta 02
@@ -102,6 +104,9 @@ int main(){  // principais funçoes
     printf("Area Km²: %.2f\n", areakm2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos Turisticos: %i\n", pontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", populacao2 / areakm2);
+    printf("PIB per capita: %.2f\n", pibpercapita2);
+
 
 
 
