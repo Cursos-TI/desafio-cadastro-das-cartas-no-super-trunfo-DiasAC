@@ -26,7 +26,7 @@ int main(){  // principais funçoes
 
     while (getchar() != '\n'); 
     printf("Digite o nome da Cidade:\n");
-    scanf("%s", &cidade1);
+    fgets(cidade1, 50, stdin);   // uso de fgtes para leitura de palavras separadas
     
      while (getchar() != '\n');
     printf("Digite a População da Cidade:\n");
@@ -64,7 +64,7 @@ int main(){  // principais funçoes
 
     while (getchar() != '\n'); 
     printf("Digite o nome da Cidade:\n");
-    scanf("%s", &cidade1);
+    fgets(cidade2, 50, stdin);;
     
     while (getchar() != '\n');
     printf("Digite a População da Cidade:\n");
