@@ -27,7 +27,7 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta1);
 
-    while (getchar ()!='\n');
+    while (getchar ()!='\n'); // uso do while getchat para limpar buffer
     printf("Digite o nome da Cidade:\n");
     fgets(cidade1, 50, stdin);   // uso de fgtes para leitura de palavras separadas
     
@@ -71,8 +71,9 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta2);
 
+    while (getchar ()!='\n');
     printf("Digite o nome da Cidade:\n");
-    fgets(cidade2, 50, stdin);;
+    fgets(cidade2, 50, stdin);
     
     printf("Digite a População da Cidade:\n");
     scanf("%lu", &populacao2);
@@ -102,7 +103,7 @@ int main(){  // principais funçoes
     printf("PIB: %.2f\n", pib1);
     printf("Pontos Turisticos: %i\n", pontosturisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", populacao1 / areakm1);
-    printf("PIB per capita: %.2f\n reais", pibpercapita1);
+    printf("PIB per capita: %.2f\n reais\n", pibpercapita1);
     printf("Super Poder: %.2f\n" , superpoder1);
 
 
@@ -116,13 +117,13 @@ int main(){  // principais funçoes
     printf("PIB: %.2f\n", pib2);
     printf("Pontos Turisticos: %i\n", pontosturisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", populacao2 / areakm2);
-    printf("PIB per capita: %.2f\n reais", pibpercapita2);
+    printf("PIB per capita: %.2f reais\n", pibpercapita2);
     printf("Super Poder: %.2f\n" , superpoder2);
 
 
     // Resultado Final
 
-    printf ("Resultado \n");
+    printf ("Resultado \n");  // resultado comparando cada carta
     int resultado;
 
     resultado = populacao1 > populacao2 ;
