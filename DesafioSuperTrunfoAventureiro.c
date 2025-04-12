@@ -16,9 +16,9 @@ int main(){  // principais funçoes
     char codcarta1[4];
     char cidade1[50];
     float pibpercapita1;
-    float densidade1 = 0.0;
-    float pibcapita1 = 0.0;
-    float superpoder1 = 0.0;
+    float densidade1;
+    float pibcapita1 ;
+    float superpoder1 ;
 
     printf("Digite a letra do Estado entre A e H:\n");   // Leitura e inserção de dados pelos usuários
     scanf("%s", &estado1);
@@ -27,11 +27,10 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta1);
 
-    while (getchar() != '\n'); 
+    while (getchar ()!='\n');
     printf("Digite o nome da Cidade:\n");
     fgets(cidade1, 50, stdin);   // uso de fgtes para leitura de palavras separadas
     
-     while (getchar() != '\n');
     printf("Digite a População da Cidade:\n");
     scanf("%lu", &populacao1);
         
@@ -60,9 +59,9 @@ int main(){  // principais funçoes
     char codcarta2[4];
     char cidade2[50];
     float pibpercapita2;
-    float densidade2 = 0.0;
-    float pibcapita2 = 0.0;
-    float superpoder2 = 0.0;
+    float densidade2 ;
+    float pibcapita2 ;
+    float superpoder2;
 
 
     printf("Digite a letra do Estado entre A e H:\n");   // Leitura e inserção dos dados pelos usuários
@@ -72,11 +71,9 @@ int main(){  // principais funçoes
     printf("Digite o codigo da carta entre 01 e 04 (ex:A01):\n");
     scanf("%s", &codcarta2);
 
-    while (getchar() != '\n'); 
     printf("Digite o nome da Cidade:\n");
     fgets(cidade2, 50, stdin);;
     
-    while (getchar() !='n');
     printf("Digite a População da Cidade:\n");
     scanf("%lu", &populacao2);
         
@@ -91,7 +88,8 @@ int main(){  // principais funçoes
 
     pibpercapita2 =  pib2 * 1000000000 / (float) populacao2; // calculo usando casting
     densidade2 = (float)populacao2 / areakm2;
-    superpoder2 = (float)populacao2 + areakm2 + pontosturisticos2 + pibpercapita2 + (1.0 / densidade2);
+    superpoder2 = populacao2 + areakm2 + pontosturisticos2 + pibpercapita2 + (1.0f / densidade2);
+
 
     //Exibição do resultado das cartas
 
@@ -128,25 +126,25 @@ int main(){  // principais funçoes
     int resultado;
 
     resultado = populacao1 > populacao2 ;
-    printf ("População: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("População: Carta %d venceu ('%d')\n", resultado ? 1:2, resultado );
 
     resultado = areakm1 > areakm2 ;
-    printf ("Área: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("Área: Carta %d venceu (%d)\n", resultado ? 1:2 , resultado);
 
     resultado = pib1 > pib2 ;
-    printf ("PIB: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("PIB: Carta %d venceu (%d)\n", resultado ? 1:2 , resultado);
 
     resultado = pontosturisticos1 > pontosturisticos2 ;
-    printf ("Pontos Turísticos: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("Pontos Turísticos: Carta %d venceu (%d)\n", resultado ? 1:2 ,  resultado);
 
     resultado = densidade1 < densidade2 ;
-    printf ("Densidade Populacional: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("Densidade Populacional: Carta %d venceu (%d)\n", resultado ? 1:2 , resultado);
 
     resultado = pibpercapita1 > pibpercapita2 ;
-    printf ("PIB Per Capita: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("PIB Per Capita: Carta %d venceu (%d)\n", resultado ? 1:2 , resultado);
 
     resultado = superpoder1 > superpoder2 ;
-    printf ("Super Poder: Carta %d venceu (%d)\n", resultado ? 1:2 resultado);
+    printf ("Super Poder: Carta %d venceu (%d)\n", resultado ? 1:2 , resultado);
 
  
     return 0;
